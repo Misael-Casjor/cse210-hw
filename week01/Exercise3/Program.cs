@@ -7,8 +7,8 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise3 Project.");
         Random randomGenerator = new Random();
-        int magicNumber = randomGenerator.Next(1,9);
-        Console.WriteLine("Choose a number between 1 to 9");
+        int magicNumber = randomGenerator.Next(1,100);
+        Console.WriteLine("Choose a number between 1 to 100");
         string selectedNumber = Console.ReadLine();
         int number = int.Parse(selectedNumber);
          
