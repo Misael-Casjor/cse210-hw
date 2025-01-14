@@ -14,15 +14,22 @@ class Program
          
         while (number != magicNumber)
         {
+            number = int.Parse(selectedNumber);
+
             if (number < magicNumber)
             {
-                Console.WriteLine("Higer");
+                Console.WriteLine("Higer, gess again");
+                selectedNumber =  Console.ReadLine();
             }
-             if (number > magicNumber)
+            else if (number > magicNumber)
             {
-                Console.WriteLine("Lower");
+                Console.WriteLine("Lower, gess again");
+                selectedNumber =  Console.ReadLine();
             }
         }
-
+        if (number == magicNumber)
+        {
+        Console.WriteLine($"you gessed it! the magic number was {magicNumber}");
+        }
     }
 }
