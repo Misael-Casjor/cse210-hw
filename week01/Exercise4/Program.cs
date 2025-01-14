@@ -10,10 +10,14 @@ class Program
         int intnumber = int.Parse(number);
 
         List<int> numbers = new List<int>();
-        
-        if (intnumber != 0)
+
+        while  (intnumber != 0)
         {
-            
+            numbers.Add(intnumber);   
         }
-    }
+    }  
+        
+    
+        
+    
 }
