@@ -6,6 +6,11 @@ class Program
      static void Main(string[] args)
     {
         Console.WriteLine("Hello World! This is the Exercise5 Project.");
+        DisplayWelcome();
+        string name = PromtUserName();
+        int userNumber = PromptUserNumber();
+        int square = SquareNumber(userNumber);
+        DisplayResult(name, square);
         void  DisplayWelcome()
         {
             Console.WriteLine("Welcome to the program!");
@@ -23,18 +28,16 @@ class Program
             int number =  int.Parse(userNumber);
             return number;
         }
-        static int SquareNumber(int number)
+        static int SquareNumber(int number) 
         {
-            Console.WriteLine("Enter a number to square");
-            string numberGiven = Console.ReadLine();
-            int numberint = int.Parse(numberGiven);
-            int numberSquared = numberint * numberint;
+     
+            int numberSquared = number * number;
             return numberSquared;
         }
-        static void DisplayResult(string name, int numberSquared)
+        static void DisplayResult(string name, int square)
         {
 
-            Console.WriteLine($"your name is {name} and squared number is {numberSquared}");
+            Console.WriteLine($"your name is {name} and squared number is {square}");
         }
 
     }
