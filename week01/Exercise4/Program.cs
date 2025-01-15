@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 
 class Program
 {
@@ -9,17 +10,24 @@ class Program
 
 
         List<int> numbers = new List<int>();
-
+        int number = -1;
         do
         {        
          Console.Write("Enter a Number for your list");
          string numberstr = Console.ReadLine();
-         int number = int.Parse(numberstr);
-        
+         number = int.Parse(numberstr);
+         if (number != 0)
+         {
+            numbers.Add(number);
+         }
 
-        } while (number != 0);
-    }   
+
+        } while (number != 0);    
+          Console.Write("Here is your list:");
+          Console.WriteLine(numbers);
+
         
+    }     
     
         
     
