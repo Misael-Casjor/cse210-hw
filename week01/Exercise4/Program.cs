@@ -5,17 +5,21 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World! This is the Exercise4 Project.");
-        Console.WriteLine("Enter a lis of numbers, type 0 to stop");
-        string number = Console.ReadLine();
-        int intnumber = int.Parse(number);
+        Console.WriteLine("Enter a list of numbers one by one, type 0 to stop");
+
 
         List<int> numbers = new List<int>();
 
-        while  (intnumber != 0)
-        {
-            numbers.Add(intnumber);   
-        }
-    }  
+        do
+        {        
+            string number = Console.ReadLine();
+            int intnumber = int.Parse(number);
+            numbers.Add(intnumber);
+            Console.WriteLine("Enter another number");
+            number = Console.ReadLine();
+            intnumber = int.Parse(number);
+        } while  (intnumber != 0);
+    }   
         
     
         
