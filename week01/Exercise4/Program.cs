@@ -18,7 +18,21 @@ class Program
             string strNumber = Console.ReadLine();
             number = int.Parse(strNumber);
 
+            if (number != 0)
+            {
+                numbers.Add(number);
+            }
+
         }
+        int total = 0;
+        foreach(int listItem in numbers)
+        {
+            total += listItem;
+        }
+
+        Console.WriteLine($"the total sum is {total}");
+
+        
 
 
         
