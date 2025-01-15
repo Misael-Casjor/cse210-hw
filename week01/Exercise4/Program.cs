@@ -12,13 +12,12 @@ class Program
 
         do
         {        
-            string number = Console.ReadLine();
-            int intnumber = int.Parse(number);
-            numbers.Add(intnumber);
-            Console.WriteLine("Enter another number");
-            number = Console.ReadLine();
-            intnumber = int.Parse(number);
-        } while  (intnumber != 0);
+         Console.Write("Enter a Number for your list");
+         string numberstr = Console.ReadLine();
+         int number = int.Parse(numberstr);
+        
+
+        } while (number != 0);
     }   
         
     
