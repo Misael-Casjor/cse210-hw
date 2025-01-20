@@ -20,7 +20,20 @@ class Program
         job2._startYear = "2019";
         job2._endYear = "2025";
 
-    job1.DisplayJobDetails();
-    job2.DisplayJobDetails();
+
+        
+        Resume person1 = new Resume();
+
+        person1._name = "Misael Castro";
+        person1._jobs.Add(job1);
+        person1._jobs.Add(job2);
+
+        person1.Display();
+ 
+
+
+            
+        
+    
     }
 }
