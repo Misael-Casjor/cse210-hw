@@ -1,6 +1,7 @@
 using System;
 using System.Formats.Asn1;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Channels;
 
 class Program
@@ -29,10 +30,17 @@ class Program
                 string randomprompt = items[randompick];
                 Console.WriteLine(randomprompt);
                 string answer = Console.ReadLine();
+                public static void SaveToFile(string answer)
+                {
+                  string filename = "Save.txt";
 
-            
+                  using (StreamWriter outputFile = new StreamWriter(filename))
+                  {
+                    outputFile.WriteLine(answer);
+                  }
+                }
             }
         }
-
+         
     }
 }
