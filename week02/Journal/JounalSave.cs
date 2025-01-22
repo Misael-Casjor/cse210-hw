@@ -16,7 +16,7 @@ public static class FilesSaver
 
         using (StreamWriter outputFile = new StreamWriter(filename))
             {
-                outputFile.WriteLine($"Date: {dateText}Entry:{answer}");
+                outputFile.WriteLine($"Date: {dateText} Entry:{answer}");
             }
         }  
 }

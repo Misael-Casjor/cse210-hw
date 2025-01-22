@@ -30,8 +30,21 @@ class Program
                 string randomprompt = items[randompick];
                 Console.WriteLine(randomprompt);
                 string answer = Console.ReadLine();
+                Console.WriteLine("SELECT OPTION 3 TO SAVE JOUR JOURNAL");
                 FilesSaver.SaveToFile(answer);
                
+            }
+            else if (chosen == "2")
+            {
+
+            }
+            else if (chosen == "3")
+            {
+
+            }
+            else if (chosen == "4")
+            {
+                
             }
         }
 
