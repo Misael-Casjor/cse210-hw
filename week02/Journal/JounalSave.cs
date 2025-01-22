@@ -1,10 +1,14 @@
-using System;
+using System.IO;
 
-
-
-public class Journal
+public static class FilesSaver
 {
-    public string _saved;
-    public string _date;
+    public static void SaveToFile(string answer)
+        {
+        string filename = "Save.txt";
 
+        using (StreamWriter outputFile = new StreamWriter(filename))
+            {
+                outputFile.WriteLine(answer);
+            }
+        }  
 }

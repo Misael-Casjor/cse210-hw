@@ -30,17 +30,11 @@ class Program
                 string randomprompt = items[randompick];
                 Console.WriteLine(randomprompt);
                 string answer = Console.ReadLine();
-                public static void SaveToFile(string answer)
-                {
-                  string filename = "Save.txt";
-
-                  using (StreamWriter outputFile = new StreamWriter(filename))
-                  {
-                    outputFile.WriteLine(answer);
-                  }
-                }
+                FilesSaver.SaveToFile(answer);
+               
             }
         }
-         
+
+
     }
 }
