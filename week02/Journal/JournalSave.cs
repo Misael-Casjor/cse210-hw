@@ -14,7 +14,7 @@ public static class FilesSaver
         string filename = "Save.txt";
         string dateText = DateSaved();
 
-        using (StreamWriter outputFile = new StreamWriter(filename))
+        using (StreamWriter outputFile = new StreamWriter(filename, true))
             {
                 outputFile.WriteLine($"Date: {dateText} Entry:{answer}");
             }
