@@ -1,5 +1,5 @@
 using System.IO;
-public class Displayer
+public class Loader
 {
    public static string ReadFromFile()
      {
