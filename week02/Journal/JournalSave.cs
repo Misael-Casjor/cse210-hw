@@ -9,14 +9,14 @@ public static class FilesSaver
         DateTime theCurrentTime = DateTime.Now;
         return theCurrentTime.ToShortDateString();
         } 
-    public static void SaveToFile(string answer)
+    public static void SaveToFile(string _answer)
         {
-        string filename = "Save.txt";
-        string dateText = DateSaved();
+        string _filename = "Save.txt";
+        string _dateText = DateSaved();
 
-        using (StreamWriter outputFile = new StreamWriter(filename, true))
+        using (StreamWriter outputFile = new StreamWriter(_filename, true))
             {
-                outputFile.WriteLine($"Date: {dateText} Entry:{answer}");
+                outputFile.WriteLine($"Date: {_dateText} Entry:{_answer}");
             }
         }  
 }

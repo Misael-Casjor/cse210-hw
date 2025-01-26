@@ -9,11 +9,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        string chosen = "0";
-        string answer = "";
-        string filecontent = "";
+        string _chosen = "0";
+        string _answer = "";
+        string _filecontent = "";
 
-        while (chosen != "5")
+        while (_chosen != "5")
   
         {                
             Prompts promptaccess = new Prompts(); 
@@ -28,58 +28,58 @@ class Program
             Console.WriteLine("4.-Load the journal from a file");
             Console.WriteLine("5.-Close the program");
             Console.WriteLine("Choose your option");
-            chosen = Console.ReadLine();
+            _chosen = Console.ReadLine();
 
-            if (chosen == "1")
+            if (_chosen == "1")
             {
    
 
 
                 Console.WriteLine(randomprompt);
-                answer = Console.ReadLine();
+                _answer = Console.ReadLine();
                 Console.WriteLine("SELECT OPTION 3 TO SAVE JOUR JOURNAL");
                 
                
             }
-            else if (chosen == "2")
+            else if (_chosen == "2")
             {
-              if (answer == "" && filecontent == "" )  
+              if (_answer == "" && _filecontent == "" )  
               {
                 Console.WriteLine("No file loaded or prompt written, do one or both to display them here");  
               }
-              else if (answer == "" && filecontent != "")
+              else if (_answer == "" && _filecontent != "")
               {
-                Console.WriteLine(filecontent);
+                Console.WriteLine(_filecontent);
               }
               else
               {
                   Console.WriteLine("Press option 3 to se your entire Journal");
-                  Console.WriteLine($"recent prompt: {randomprompt} {answer}");
-                  if (filecontent == "")
+                  Console.WriteLine($"recent prompt: {randomprompt} {_answer}");
+                  if (_filecontent == "")
                     {
                         Console.WriteLine("No Journal loaded 3, go to option 3 to see your entire yournal");
                     }
                     else
                     {
-                       Console.WriteLine(filecontent);
+                       Console.WriteLine(_filecontent);
                     }
               }
               
 
             }
-            else if (chosen == "3")
+            else if (_chosen == "3")
             {
-            FilesSaver.SaveToFile($"{randomprompt} {answer}");
+            FilesSaver.SaveToFile($"{randomprompt} {_answer}");
             Console.WriteLine("YOUR ENTRY HAS BEEN ADDED SUCCESFULLY");   
             }
-            else if (chosen == "4")
+            else if (_chosen == "4")
             {
  
              
-              filecontent = Loader.ReadFromFile();
+              _filecontent = Loader.ReadFromFile();
               Console.WriteLine("Journal loaded");
             }
-            else if (chosen == "5")
+            else if (_chosen == "5")
             {
                 break; 
             }
