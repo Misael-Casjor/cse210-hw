@@ -1,4 +1,6 @@
 using System;
+using System.Reflection.Metadata;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
@@ -7,7 +9,9 @@ class Program
         Console.WriteLine("Hello World! This is the Journal Project.");
         int option;
 
-        do {
+        do
+        {
+            int count = 0;
             Console.WriteLine("1. Write");
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Load");
@@ -16,9 +20,17 @@ class Program
             option = int.Parse(Console.ReadLine());
 
 
-            if (option == 1) {
-                Console.WriteLine("the randompromt will be here!");
-                string userEntry = Console.ReadLine();
+            if (option == 1)
+            {
+                PromptGenerator singlePromt = new PromptGenerator();
+                string sPrompt = singlePromt.GetRandomPrompt();
+                Entry entry = new Entry();
+                entry._userEntry = Console.ReadLine();
+                entry._prompt =  sPrompt;
+                
+
+                count +=1;
+
              }
             if (option == 2) { }
             if (option == 3) { }
