@@ -14,6 +14,16 @@ class Program
             Console.WriteLine("4. Save");
             Console.WriteLine("5. Quit");
             option = int.Parse(Console.ReadLine());
-        }while(option != 5);
+
+
+            if (option == 1) {
+                Console.WriteLine("the randompromt will be here!");
+                string userEntry = Console.ReadLine();
+             }
+            if (option == 2) { }
+            if (option == 3) { }
+            if (option == 4) { }
+
+        } while (option != 5);
     }
 }
