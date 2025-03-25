@@ -13,7 +13,9 @@ class Program
         Console.WriteLine("Hello World! This is the Journal Project.");
         int option;
         List<Entry> _entries = new List<Entry>();
+        List<string> loadedFile = new List<string>();
         int count = 0;
+        string fileName = "entries.txt";
         do
         {
             
@@ -54,9 +56,22 @@ class Program
                 }
                 
              }
-            if (option == 3) { }
+            if (option == 3) {
+                string[] lines = System.IO.File.ReadAllLines(fileName);
+
+                foreach (string line in lines)
+                {
+                    loadedFile.Add(line);
+                }
+
+            }
             if (option == 4) {
-                Console.WriteLine("");
+                
+                using (StreamWriter outputFile = new StreamWriter(fileName))
+                    foreach (Entry item in _entries)
+                    {
+                        outputFile.WriteLine(item.EntireEntry());
+                    }
                 count = 0;
              }
 
