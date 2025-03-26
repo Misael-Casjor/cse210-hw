@@ -27,10 +27,10 @@ class Program
             option = int.Parse(Console.ReadLine());
             if (count > 0){
                 if(count == 1){
-                    Console.WriteLine($"ATTENTION you have {count} entry widout saving, remember to save your entry");
+                    Console.WriteLine($"ATTENTION you have {count} entry without saving, remember to save your entry");
                 }
                 if(count > 1){
-                    Console.WriteLine($"ATTENTION you have {count} entries widout saving, remember to save your entries");
+                    Console.WriteLine($"ATTENTION you have {count} entries without saving, remember to save your entries");
                 }
             
             }
@@ -77,7 +77,7 @@ class Program
                     {
                         outputFile.WriteLine(item.EntireEntry());
                     }
-                    Console.WriteLine("the entries have been loaded succesfully!");
+                    Console.WriteLine("the entries have been saved succesfully!");
                     _entries.Clear();
                 count = 0;
              }
