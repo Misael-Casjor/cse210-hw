@@ -48,32 +48,57 @@ class Program
 
 
                 count +=1;
+            }
 
-             }
             if (option == 2) {
                 foreach (Entry item in _entries){
                     Console.WriteLine(item.EntireEntry());
                 }
-                
+                foreach (string loaded in loadedFile){
+                    Console.WriteLine(loaded);
+                }
              }
             if (option == 3) {
-                string[] lines = System.IO.File.ReadAllLines(fileName);
+                loadedFile.Clear();//I added this so the list gets overwrited instead of duplicated when you try to 
+                //load the file twice 
+                string[] lines = System.IO.File.ReadAllLines(fileName);// from the assigment page
 
                 foreach (string line in lines)
                 {
                     loadedFile.Add(line);
                 }
+                Console.WriteLine($"the file ({fileName}) has been loaded succesfully");
 
             }
             if (option == 4) {
                 
-                using (StreamWriter outputFile = new StreamWriter(fileName))
+                using (StreamWriter outputFile = new StreamWriter(fileName, true))
                     foreach (Entry item in _entries)
                     {
                         outputFile.WriteLine(item.EntireEntry());
                     }
+                    Console.WriteLine("the entries have been loaded succesfully!");
+                    _entries.Clear();
                 count = 0;
              }
+
+
+            if (count > 0)
+            {
+                if (count == 1)
+                {
+                    Console.WriteLine($"ATTENTION you have {count} entry widout saving, remember to save your entry");
+                }
+                if (count > 1)
+                {
+                    Console.WriteLine($"ATTENTION you have {count} entries widout saving, remember to save your entries");
+                }
+
+            }
+
+            if (option > 5){
+                Console.WriteLine("please enter a number between 1 and 5");
+            }
 
         } while (option != 5);
     }
