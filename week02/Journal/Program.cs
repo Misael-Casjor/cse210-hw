@@ -25,8 +25,8 @@ class Program
             Console.WriteLine("4. Save");
             Console.WriteLine("5. Quit");
             option = int.Parse(Console.ReadLine());
-
-            
+    
+            journal.ShowSaveWarning(); //This is the extra feature
             
 
             if (option == 1)
@@ -39,7 +39,7 @@ class Program
              }
 
             else if (option == 3) {
-               journal.LoadEntries();
+               journal.LoadEntries();//press this option after you save so you can see the entries
 
             }
             else if (option == 4) {

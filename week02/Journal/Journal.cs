@@ -29,6 +29,8 @@ public class Journal{
         {
             Console.WriteLine(loaded);
         }
+        Console.WriteLine("Press enter to go back to menu");
+        Console.ReadLine();
 
     }
 
@@ -50,7 +52,7 @@ public class Journal{
             {
                 outputFile.WriteLine(item.EntireEntry());
             }
-        Console.WriteLine("the entries have been saved succesfully!");
+        Console.WriteLine("the entries have been saved SUCCESSFULLY!");
         _entries.Clear();
         count = 0;
 
