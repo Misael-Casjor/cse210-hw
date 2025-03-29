@@ -24,4 +24,18 @@ public class Fraction{
   public void SetTop(int top){// reminder SETTER
     _top = top;
   }
+  public int GetBottom(){
+    return _bottom;
+  }
+  public void SetBottom(int bottom){
+    _bottom = bottom;
+  }
+
+
+  public string GetFractionString(){
+    return $"The fraction is: {_top}/{_bottom}";
+  }
+  public double GetDecimalValue(){
+    return (double)_top/_bottom;
+  }
 }
