@@ -8,6 +8,7 @@ class Program
 
         int pGrade;
         string grade;
+        bool pass = false;
 
         Console.WriteLine("Hello World! This is the Exercise2 Project.");
 
@@ -19,26 +20,39 @@ class Program
             grade = "A";
         }
 
-        if (pGrade >= 80)
+        else if (pGrade >= 80)
         {
             grade = "B";
         }
 
-        if (pGrade >= 70)
+        else if (pGrade >= 70)
         {
             grade = "C";
         }
 
-        if (pGrade >= 60)
+        else if (pGrade >= 60)
         {
             grade = "D";
         }
 
-        if (pGrade > 50)
+        else
         {
             grade = "F";
         }
-        
-        
+
+        if (pGrade >= 70)
+        {
+            pass = true;
+        }
+
+
+        if (pass = true)
+        {
+            Console.WriteLine($"You passed! Your grade is {grade}");
+        }
+        else
+        {
+            Console.WriteLine($"keep going! you dint pass, your grade is {grade}");
+        }
     }
 }
