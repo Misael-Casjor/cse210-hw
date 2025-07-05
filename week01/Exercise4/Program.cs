@@ -10,10 +10,13 @@ class Program
         List<int> numbers;
         numbers = new List<int>();
         int toAdd;
+        int sum = 0;
+        int count = 0;
+        int largest = 0;
         Console.WriteLine("Enter a list of numbers, type 0 when youre done");
         do
         {
-            Console.WriteLine("Enter the number you want to add:");
+            Console.WriteLine("Enter the number you want to add(type 0 to finish):");
             toAdd = int.Parse(Console.ReadLine());
             if (toAdd != 0)
             {
@@ -25,7 +28,17 @@ class Program
         foreach (int item in numbers)
         {
             Console.WriteLine(item);
+            sum += item;
+            count += 1;
+            if (item > largest)
+            {
+                largest = item;
+            }
         }
+
+        int average = sum / count;
+        Console.WriteLine($"the sum is {sum}");
+        Console.WriteLine($"the average is {average}");
 
     }
 }
