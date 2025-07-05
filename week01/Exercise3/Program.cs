@@ -8,21 +8,29 @@ class Program
         //gess my number game
         int magicNumber;
         int response;
-        Console.WriteLine("enter the magic number");
-        magicNumber = int.Parse(Console.ReadLine());
+        string proceed;
         do
         {
-            Console.WriteLine("Enter your gess");
-            response = int.Parse(Console.ReadLine());
-            if (response > magicNumber)
+            Random magicNumberGenerator = new Random();
+            magicNumber = magicNumberGenerator.Next(1, 101);
+
+            do
             {
-                Console.WriteLine("Lower");
-            }
-            else if (response < magicNumber)
-            {
-                Console.WriteLine("Higer");
-            }
-        } while (response != magicNumber);
-        Console.WriteLine("You gessed it");
+                Console.WriteLine("Enter your gess");
+                response = int.Parse(Console.ReadLine());
+                if (response > magicNumber)
+                {
+                    Console.WriteLine("Lower");
+                }
+                else if (response < magicNumber)
+                {
+                    Console.WriteLine("Higer");
+                }
+            } while (response != magicNumber);
+            Console.WriteLine("You gessed it!");
+            Console.WriteLine("want to play again? (type 'yes' to continue)");
+            proceed = Console.ReadLine();
+
+        } while (proceed == "yes");
     }
 }
