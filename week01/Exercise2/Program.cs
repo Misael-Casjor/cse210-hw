@@ -46,12 +46,18 @@ class Program
 
         if (plusOrMines >= 7 && grade != "A" && grade != "F")
         {
-            totalGrade = $"+ {grade}";
+            totalGrade = $"+{grade}";
         }
-        else if (plusOrMines )
+        else if (plusOrMines < 3 && grade != "F")
         {
-
+            totalGrade = $"-{grade}";
         }
+        else
+        {
+            totalGrade = grade;
+        }
+
+        Console.WriteLine($"Your grade is {totalGrade}");
         
 
 
