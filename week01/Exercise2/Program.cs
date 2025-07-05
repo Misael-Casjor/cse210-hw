@@ -8,13 +8,15 @@ class Program
 
         int pGrade;
         string grade;
-        bool pass = false;
+        string totalGrade;
+        int plusOrMines;
+
 
         Console.WriteLine("Hello World! This is the Exercise2 Project.");
 
         Console.WriteLine("What is your grade percentage?");
         pGrade = int.Parse(Console.ReadLine());
-
+        plusOrMines = pGrade % 10;
         if (pGrade >= 90)
         {
             grade = "A";
@@ -40,19 +42,20 @@ class Program
             grade = "F";
         }
 
-        if (pGrade >= 70)
-        {
-            pass = true;
-        }
 
 
-        if (pass = true)
+        if (plusOrMines >= 7 && grade != "A" && grade != "F")
         {
-            Console.WriteLine($"You passed! Your grade is {grade}");
+            totalGrade = $"+ {grade}";
         }
-        else
+        else if (plusOrMines )
         {
-            Console.WriteLine($"keep going! you dint pass, your grade is {grade}");
+
         }
+        
+
+
+        
+        
     }
 }
