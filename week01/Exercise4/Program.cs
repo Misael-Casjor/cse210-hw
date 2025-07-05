@@ -13,6 +13,7 @@ class Program
         int sum = 0;
         int count = 0;
         int largest = 0;
+        int smallest = int.MaxValue;//looked online for this technice in specific(only this line)
         Console.WriteLine("Enter a list of numbers, type 0 when youre done");
         do
         {
@@ -34,11 +35,17 @@ class Program
             {
                 largest = item;
             }
+            if (item > 0 && item < smallest)
+            {
+                smallest = item;
+            }
         }
 
         int average = sum / count;
         Console.WriteLine($"the sum is {sum}");
         Console.WriteLine($"the average is {average}");
+        Console.WriteLine($"the largest is {largest}");
+        Console.WriteLine($"The smallest positive is {smallest}");
 
     }
 }
