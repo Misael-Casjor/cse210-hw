@@ -28,7 +28,7 @@ class Program
         Console.WriteLine("this is your list");
         foreach (int item in numbers)
         {
-            Console.WriteLine(item);
+        
             sum += item;
             count += 1;
             if (item > largest)
@@ -41,7 +41,15 @@ class Program
             }
         }
 
-        int average = sum / count;
+        numbers.Sort();
+
+        Console.WriteLine("I organized this List for you!");
+        foreach (int oNumber in numbers)
+        {
+            Console.WriteLine(oNumber);
+        }
+
+            int average = sum / count;
         Console.WriteLine($"the sum is {sum}");
         Console.WriteLine($"the average is {average}");
         Console.WriteLine($"the largest is {largest}");
