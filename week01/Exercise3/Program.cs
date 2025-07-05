@@ -9,6 +9,7 @@ class Program
         int magicNumber;
         int response;
         string proceed;
+        int tries = 0;
         do
         {
             Random magicNumberGenerator = new Random();
@@ -16,6 +17,7 @@ class Program
 
             do
             {
+                tries += 1;
                 Console.WriteLine("Enter your gess");
                 response = int.Parse(Console.ReadLine());
                 if (response > magicNumber)
@@ -28,6 +30,7 @@ class Program
                 }
             } while (response != magicNumber);
             Console.WriteLine("You gessed it!");
+            Console.WriteLine($"it took you {tries} tries!");
             Console.WriteLine("want to play again? (type 'yes' to continue)");
             proceed = Console.ReadLine();
 
