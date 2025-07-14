@@ -1,3 +1,5 @@
+using System.Net.Mail;
+
 public class Entry
 {
     string _date;
@@ -6,7 +8,7 @@ public class Entry
 
     public Entry()
     {
-
+        _date = DateTime.Now.ToString("M/d/yyyy");
     }
     public void DisplayPrompt()
     {
