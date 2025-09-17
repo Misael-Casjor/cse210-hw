@@ -12,7 +12,9 @@ public class Journal
         PromptGenerator prompt = new PromptGenerator();
         string _thePrompt = prompt.RandomPrompt();
         entry._promptext = _thePrompt;
-        entry._promptext = Console.ReadLine(); 
+        Console.WriteLine(_thePrompt);
+        entry._entryText = Console.ReadLine();
+        _entries.Add(entry);
        
     }
 

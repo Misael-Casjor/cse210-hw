@@ -11,7 +11,7 @@ class Program
         Console.WriteLine(_thePrompt);
         Journal journal = new Journal();
 
-        int option = 1;
+        int option = 0;
         do
         {
             Console.WriteLine("Select an option:");
@@ -22,27 +22,29 @@ class Program
             Console.WriteLine("5 ");
             Console.WriteLine("6 quit");
 
+            option = int.Parse(Console.ReadLine());
+            
             if (option == 1)
             {
                 journal.AddEntry();
             }
-            if (option == 2)
+            else if (option == 2)
             {
 
             }
-            if (option == 3)
+            else if (option == 3)
             {
 
             }
-            if (option == 4)
+            else if (option == 4)
             {
 
             }
-            if (option == 5)
+            else if (option == 5)
             {
 
             }
-            if (option == 6)
+            else if (option == 6)
             {
 
             }
