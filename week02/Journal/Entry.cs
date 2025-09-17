@@ -7,10 +7,12 @@ public class Entry
     public string _entryText;
 
 
- 
-    public void Diplay()
+
+    public void Display()
     {
-        Console.WriteLine($" {_date} {_promptext} {_entryText}");
+        Console.WriteLine($" {_date}/ {_promptext}");
+        Console.WriteLine(_entryText);
+        Console.WriteLine();
     }
 
 

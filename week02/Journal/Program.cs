@@ -30,7 +30,7 @@ class Program
             }
             else if (option == 2)
             {
-
+                journal.DisplayAll();
             }
             else if (option == 3)
             {

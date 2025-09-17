@@ -21,7 +21,10 @@ public class Journal
 
     public void DisplayAll()
     {
-        
+        foreach (Entry record in _entries)
+        {
+            record.Display();
+        }
     }
 
     public void SaveToFile()
