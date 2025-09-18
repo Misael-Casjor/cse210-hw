@@ -3,7 +3,8 @@ using System.Runtime.InteropServices;
 
 class Program
 {    //EXTRA, there is an anty dupping sistem for entries, when a file its loaded, and then
-    // the save option its selected, it will ask the user if he want to re-save the loaded entries
+     // the save option its selected, it will ask the user if he want to re-save the loaded entries
+    //its on the Journal.cs FILE
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World! This is the Journal Project.");
@@ -24,7 +25,7 @@ class Program
 
 
             option = int.Parse(Console.ReadLine());
-            
+
             if (option == 1)
             {
                 journal.AddEntry();
